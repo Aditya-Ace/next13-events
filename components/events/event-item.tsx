@@ -1,6 +1,10 @@
 import Link from 'next/link'
 
 import styles from './event-item.module.css'
+import Button from '../ui/button'
+import DateIcon from '../icons/date-icon'
+import AddressIcon from '../icons/address-icon'
+import ArrowRightIcon from '../icons/arrow-right-icon'
 
 interface EventItemProps {
 	id: string
@@ -25,16 +29,21 @@ const EventItem: React.FC<EventItemProps> = ({
 				<div className={styles.summary}>
 					<h2 className={styles.title}>{title}</h2>
 					<div className={styles.date}>
+						<DateIcon />
 						<time>{date}</time>
 					</div>
 					<div className={styles.location}>
+						<AddressIcon />
 						<address>{location}</address>
 					</div>
 				</div>
 				<div className={styles.actions}>
-					<Link href={`/events/${id}`} className={styles.link}>
-						Show Details
-					</Link>
+					<Button link={`/events/${id}`} className={styles.link}>
+						<span>Show Details</span>
+						<span className={styles.button__arrowIcon}>
+							<ArrowRightIcon />
+						</span>
+					</Button>
 				</div>
 			</div>
 		</li>
