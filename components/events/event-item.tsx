@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import styles from './event-item.module.css'
 import Button from '../ui/button'
 import DateIcon from '../icons/date-icon'

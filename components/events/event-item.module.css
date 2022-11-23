@@ -28,11 +28,13 @@
 .item img {
 	width: 100%;
 	object-fit: cover;
+	height: 18rem;
 }
 
 .content {
 	width: 100%;
-	padding: 1rem;
+	padding: 0 1rem;
+	text-align: center;
 }
 
 .title {
@@ -116,4 +118,19 @@
 .button__arrowIcon svg {
 	width: 1.25rem;
 	height: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+	.item {
+		flex-direction: column;
+	}
+	.item img {
+		height: 14rem;
+	}
+	.content {
+		padding: 1rem;
+	}
+	.actions {
+		width: 100%;
+	}
 }
